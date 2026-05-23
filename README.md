@@ -32,9 +32,10 @@ GENRES = [
 
 Cada filme é uma tupla `(nome, [v0, v1, ..., v7])` onde cada valor corresponde ao gênero na mesma posição da lista `GENRES`.
 
-**Exemplo:**
-- `Matrix Reloaded` tem vetor `[0.9, 0.0, 0.2, 0.0, 0.9, 0.0, 0.3, 0.0]`
-- Isso significa: ação=0.9, comédia=0.0, drama=0.2, ..., ficção científica=0.9
+**Exemplos:**
+- `Matrix Reloaded` tem vetor `[0.9, 0.0, 0.2, 0.0, 0.9, 0.0, 0.3, 0.0]` → ação=0.9, comédia=0.0, drama=0.2, ficção científica=0.9
+- `Cyberpunk: Edgerunners` tem vetor `[0.9, 0.1, 0.7, 0.0, 0.9, 0.2, 0.6, 1.0]` → ação=0.9, drama=0.7, FC=0.9, animação=1.0
+- `Tudo em todo lugar ao mesmo tempo` tem vetor `[0.8, 0.8, 0.9, 0.1, 0.9, 0.6, 0.4, 0.0]` → ação=0.8, comédia=0.8, drama=0.9, FC=0.9
 
 ---
 
@@ -146,18 +147,18 @@ Orquestra o fluxo completo:
 
 ```python
 USER_PROFILE = {
-    "ação": 0.85,
-    "comédia": 0.20,
-    "drama": 0.30,
-    "terror": 0.00,
-    "ficção científica": 0.90,
-    "romance": 0.10,
-    "suspense": 0.40,
-    "animação": 0.10,
+    "ação": 0.9,
+    "comédia": 0.2,
+    "drama": 0.6,
+    "terror": 0.0,
+    "ficção científica": 0.9,
+    "romance": 0.2,
+    "suspense": 0.5,
+    "animação": 0.8,
 }
 ```
 
-Esse perfil (fã de ação e ficção científica) faz com que o KNN recomende **Star Wars** (distância ~0.27).
+Esse perfil (fã de ação, ficção científica e animação) faz com que o KNN recomende **Cyberpunk: Edgerunners** (distância ~0.26).
 
 ---
 

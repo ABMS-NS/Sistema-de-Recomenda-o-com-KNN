@@ -24,11 +24,6 @@ def main():
     filme, distancia = recomendacoes[0]
 
     print("\n=== SISTEMA DE RECOMENDAÇÃO POR CONTEÚDO ===")
-    print("Perfil do usuário:")
-    for genero, valor in USER_PROFILE.items():
-        barra = "█" * int(valor * 20)
-        print(f"  {genero:>20}: {valor:.2f}  {barra}")
-    print("\nKNN (k=1) — Distância Euclidiana")
     print(f"  ✅ Filme recomendado: {filme}")
     print(f"  📏 Distância:        {distancia:.4f}")
 
